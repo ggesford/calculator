@@ -6,3 +6,61 @@
   blue4: #2F57AB
   blue5: #0B389D
 */
+html, body{
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#case {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 450px;
+  width: 300px;
+  border: solid black 1px;
+  padding: 16px;
+
+}
+
+#display {
+  border: solid black 1px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 48px;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+div#cluster {
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+
+}
+
+.button {
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+}
+
+#clear {
+  height: 60px;
+  width: 128px;
+}
+
