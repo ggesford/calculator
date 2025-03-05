@@ -70,8 +70,11 @@ eqButton.addEventListener('click', () => {
     num2 = parseFloat(currnum);
     let result = operate(num1, operator,num2);
     console.log(result);
-    if(result.toString().length > 10 ) {
+    if(result.toString().length > 10 && result > 9999999999) {
         result = result.toExponential(4);
+    } else if(result.toString().length > 10) {
+        result = parseFloat(result.toPrecision(9)).toFixed(8).toString();
+    
     };
     console.log(result);
     display.textContent = result;
