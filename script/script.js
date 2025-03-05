@@ -68,7 +68,12 @@ const eqButton = document.querySelector("#equals");
 
 eqButton.addEventListener('click', () => {
     num2 = parseFloat(currnum);
-    const result = operate(num1, operator,num2);
+    let result = operate(num1, operator,num2);
+    console.log(result);
+    if(result.toString().length > 10 ) {
+        result = result.toExponential(4);
+    };
+    console.log(result);
     display.textContent = result;
     num1 = result;
     currnum = result;
