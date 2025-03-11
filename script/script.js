@@ -41,6 +41,20 @@ numButton.forEach(button =>
     })
 );
 
+const decButton = document.querySelector("#decimal");
+
+decButton.addEventListener('click', () => {
+    if (display.textContent === '0' || currnum === '0') {
+        display.textContent = "0.";
+        currnum = display.textContent;
+    } else if (display.textContent.includes(".")) {
+        return;
+    } else {
+        display.textContent += decButton.textContent;
+        currnum = display.textContent;
+    };
+});
+
 const opButton = document.querySelectorAll(".operator");
 
 opButton.forEach(button =>
