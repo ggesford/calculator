@@ -73,8 +73,7 @@ eqButton.addEventListener('click', () => {
     if(result.toString().length > 10 && result > 9999999999) {
         result = result.toExponential(4);
     } else if(result.toString().length > 10) {
-        result = parseFloat(result.toPrecision(9)).toFixed(8).toString();
-    
+        result = parseFloat(parseFloat(result.toPrecision(9)).toFixed(8));
     };
     console.log(result);
     display.textContent = result;
