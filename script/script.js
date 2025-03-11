@@ -104,6 +104,18 @@ clearButton.addEventListener('click', () => {
     display.textContent = '0';
 });
 
+const backButton = document.querySelector("#back");
+
+backButton.addEventListener('click', () => {
+    if(display.textContent.length === 1 || display.textContent.includes("0.")) {
+        display.textContent = '0';
+        currnum = display.textContent;
+    } else {
+        currnum = String(currnum.slice(0, currnum.length - 1));
+        display.textContent = currnum;
+    };
+});
+
 
         
 
