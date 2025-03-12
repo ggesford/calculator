@@ -116,6 +116,48 @@ backButton.addEventListener('click', () => {
     };
 });
 
+document.addEventListener('keypress', (event) => {
+    console.log(event.key);
+    if ("1234567890.".includes(event.key)) {
+        if (display.textContent === '0' || currnum === '0') {
+            display.textContent = event.key;
+            currnum = display.textContent;
+        } else if (display.textContent.length === 10) {
+            return;
+        } else {
+            display.textContent += event.key;  
+            currnum = display.textContent;  
+        };
+    } else if ("/*-+".includes(event.key)) {
+        operator = event.key;
+        num1 = parseFloat(currnum);
+        currnum = '0';
+    } else if (".".includes(event.key)) {
+        if (display.textContent === '0' || currnum === '0') {
+            display.textContent = "0.";
+            currnum = display.textContent;
+        } else if (display.textContent.includes(".")) {
+            return;
+        } else {
+            display.textContent += decButton.textContent;
+            currnum = display.textContent;
+        };
+    } else if ("Enter".includes(event.key)) {
+        num2 = parseFloat(currnum);
+        let result = operate(num1, operator,num2);
+        console.log(result);
+        if(result.toString().length > 10 && result > 9999999999) {
+            result = result.toExponential(4);
+        } else if(result.toString().length > 10) {
+            result = parseFloat(parseFloat(result.toPrecision(9)).toFixed(8));
+        };
+        console.log(result);
+        display.textContent = result;
+        num1 = result;
+        currnum = result;
+    };  
+});
+
 
         
 
