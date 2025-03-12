@@ -6,6 +6,13 @@
   blue4: #2F57AB
   blue5: #0B389D
 */
+@font-face {
+  font-family:"VT323";
+  src:
+  local("VT323"),
+  url(../fonts/VT323-Regular.ttf)
+}
+
 html, body{
   height: 100%;
   width: 100%;
@@ -17,6 +24,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image:linear-gradient(to left top,#A1B3D7,#FFC5D3);
 }
 
 div#case {
@@ -27,7 +35,8 @@ div#case {
   width: 300px;
   border: solid black 1px;
   padding: 16px;
-
+  background-image:linear-gradient(#FCFBF9,#6581BF);
+  border-radius:2.5%;
 }
 
 #display {
@@ -39,6 +48,8 @@ div#case {
   font-size: 48px;
   padding: 4px;
   box-sizing: border-box;
+  background-color:#a5ac80;
+  font-family:"VT323";
 }
 
 div#cluster {
@@ -61,14 +72,42 @@ div#cluster {
   margin-right:2px;
 }
 
+#first > .button {
+  background-color:#D7DCEA;
+}
+
+#second > .button {
+  background-color:#A1B3D7;
+}
+
+#third > .button {
+  background-color:#6581BF;
+}
+
+#fourth > .button {
+  background-color:#2F57AB;
+}
+
+#fifth > .button {
+  background-color:#0B389D;
+}
+
 .button {
   box-sizing: border-box;
   height: 60px;
   width: 60px;
+  border-radius:50%;
 }
 
 #clear {
   height: 60px;
-  width: 128px;
+  width: 60px;
+  border-radius:50%;
+}
+
+#back {
+  height:60px;
+  width:60px;
+  border-radius:50%;
 }
 
