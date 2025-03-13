@@ -9,8 +9,15 @@
 @font-face {
   font-family:"VT323";
   src:
-  local("VT323"),
+  local("VT323-Regular.ttf"),
   url(../fonts/VT323-Regular.ttf)
+}
+
+@font-face {
+  font-family:"Merriweather";
+  src: 
+  local("Merriweather-VariableFont_opsz,wdth,wght.ttf")
+  url(../fonts/Merriweather-VariableFont_opsz\,wdth\,wght.ttf);
 }
 
 html, body{
@@ -50,6 +57,7 @@ div#case {
   box-sizing: border-box;
   background-color:#a5ac80;
   font-family:"VT323";
+  font-size:4rem;
 }
 
 div#cluster {
@@ -73,23 +81,57 @@ div#cluster {
 }
 
 #first > .button {
+  background-color:#FCFBF9;
+  font-family:"Merriweather";
+  font-size:2rem;
+}
+
+#first > .button:hover {
   background-color:#D7DCEA;
 }
 
 #second > .button {
+  color:#FCFBF9;
   background-color:#A1B3D7;
+  font-family:"Merriweather";
+  font-size:2rem;
+}
+
+#second > .button:hover {
+  background-color:#D7DCEA;
 }
 
 #third > .button {
+  color:#FCFBF9;
   background-color:#6581BF;
+  font-family:"Merriweather";
+  font-size:2rem;
+}
+
+#third > .button:hover {
+  background-color:#A1B3D7;
 }
 
 #fourth > .button {
+  color:#FCFBF9;
   background-color:#2F57AB;
+  font-family:"Merriweather";
+  font-size:2rem;
+}
+
+#fourth > .button:hover {
+  background-color:#6581BF;
 }
 
 #fifth > .button {
+  color:#FCFBF9;
   background-color:#0B389D;
+  font-family:"Merriweather";
+  font-size:2rem;
+}
+
+#fifth > .button:hover {
+  background-color:#2F57AB;
 }
 
 .button {
@@ -97,17 +139,6 @@ div#cluster {
   height: 60px;
   width: 60px;
   border-radius:50%;
+  transition-duration:0.4s;
+  cursor:pointer;
 }
-
-#clear {
-  height: 60px;
-  width: 60px;
-  border-radius:50%;
-}
-
-#back {
-  height:60px;
-  width:60px;
-  border-radius:50%;
-}
-
