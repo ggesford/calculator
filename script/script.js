@@ -47,7 +47,7 @@ decButton.addEventListener('click', () => {
     if (display.textContent === '0' || currnum === '0') {
         display.textContent = "0.";
         currnum = display.textContent;
-    } else if (display.textContent.includes(".")) {
+    } else if (display.textContent.includes(".") || display.textContent.length === 10) {
         return;
     } else {
         display.textContent += decButton.textContent;
